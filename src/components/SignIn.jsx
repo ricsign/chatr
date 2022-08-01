@@ -7,6 +7,7 @@ import { auth } from "../serve/firebase.js";
 function SignIn() {
   const googleSignIn = () => {
     const provider = new GoogleAuthProvider();
+    signInWithPopup(auth, provider); // after sign in, auth variable is automatically changed to signed in
   };
 
   return (
