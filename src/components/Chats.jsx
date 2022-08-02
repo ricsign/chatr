@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 
 import { collection, query, orderBy, limit, onSnapshot } from 'firebase/firestore';
 import { db, auth } from '../serve/firebase'
-import { timeDifference, numberToColorHsl} from '../serve/common';
+import { timeDifference, numberToColorHsl} from '../serve/common'
 
 import SignOut from './SignOut'
 import SendChat from './SendChat'
@@ -28,9 +28,9 @@ function Chats() {
             <div>Chats</div>
 
             <div className="chats">
-                {chats.map(({ id, uid, photoURL, displayName, message, sentiment, timestamp }) => (
+                {chats.map(({ id, uid, photoURL, displayName, message, healthiness, timestamp }) => (
                     <div>
-                        <div key={ Math.random().toString() + id + Math.random().toString() } className={`chat ${uid === auth.currentUser.uid ? 'sent' : 'received'}`}>
+                        <div key={ Math.random() } className={`chat ${uid === auth.currentUser.uid ? 'sent' : 'received'}`}>
                             <div>
                                 <img style={{marginLeft:'auto'}} src={photoURL} alt='profile' />
                                 {uid !== auth.currentUser.uid && 
@@ -44,11 +44,7 @@ function Chats() {
                             </div>
 
                             <div>
-                                {message.length > 5 ?
-                                    <p style={{color: 'white', backgroundColor: numberToColorHsl(sentiment), padding:'10px', fontSize:'12px', fontWeight:'bold', marginTop:"0px", borderRadius:"50%"}}> {Math.round(sentiment*100,2)} </p> :
-                                    <p style={{color: 'white', backgroundColor:'gold', padding:'10px', fontSize:'12px', fontWeight:'bold', marginTop:"0px", borderRadius:"50%"}}> TS </p>
-                                }
-                                
+                                <p style={{color: 'white', backgroundColor: numberToColorHsl(healthiness), padding:'10px', fontSize:'12px', fontWeight:'bold', marginTop:"0px", borderRadius:"20px"}}> {healthiness > 0.1 ? "H" : "T"} </p>        
                             </div>
                         </div>
                     </div>
