@@ -53,7 +53,7 @@ function SendChat({ scroll }) {
       console.log("The model has been successfully loaded.");
     };
     loadModel();
-  }, [])
+  },  [])
 
   return (
     <>
