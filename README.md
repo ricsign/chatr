@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# Chatr (Not the telecommunication company)
+#### Author: Ric Sign
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Chatr is an app created using React, Firebase, Tensorflow.js and MUI to combat toxic message and online bullying. Please visit [this website](https://ricsign.github.io/chatr/) for a live demo. 
 
-## Available Scripts
 
-In the project directory, you can run:
+## Intuition and Purposes
+Online message provides great convenience to our lives. However, toxic messages can signficantly detriment our mental health. Online bullying and toxic message can lead to very serious consequences and should not be overlooked.
 
-### `npm start`
+This app is a simulation of a chat application, and the app will evaluate each and every message a user sent, and return a score based on its toxicity. For toxic message, the app will automatically warn the user and further actions can be taken by the system administration.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## How to Use
+You can use this chat app like any other chat apps you use. If it is your first time using this app, you will be asked to sign in with Google.
+<img src="https://i.ibb.co/qj6msDJ/1.png" alt="1" border="0">
+<br />
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+You simply type whatever you are going to send and press enter. The message will be stored in the database and be evaluated using machine learning model. The color on the side indicates how healthy it is (the greener the healthier). If it says "H", even the color is not entirely green, it is still healthy; "T" means this message is toxic.
+<img src="https://i.ibb.co/BNxJgYs/2.png" alt="2" border="0">
+<br />
 
-### `npm test`
+When you type a toxic message, the system will warn you.
+<img src="https://i.ibb.co/8dY7Ryx/3.png" alt="3" border="0">
+<br />
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Any toxic message will be hidden automatically.
+<img src="https://i.ibb.co/Dt00Qdb/4.png" alt="4" border="0">
+<br />
 
-### `npm run build`
+In addition, you can check your score in the console. It is a score ranged from 0 - 1. The closer to 1 it is, the healthier (less toxic) it is. 
+<img src="https://i.ibb.co/K6wtD5J/5.png" alt="5" border="0">
+<br />
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Note that since this chat app is visible to the public, please do not disclose your personal information on the website.**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Visit and Download
+Please visit the website [here](https://ricsign.github.io/chatr/). To download, simply clone this project to your local storage.
 
-### `npm run eject`
+You can also view the demo photos in the root directory. 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
